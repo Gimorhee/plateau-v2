@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
+const connectDB = require("./config/db");
 
-app.get("/", (req, res) => {
-  res.send("?");
-});
+// Connect DB
+connectDB();
 
 // Server Routes
 const Auth = require("./routes/api/auth.js");
